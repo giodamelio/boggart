@@ -1,0 +1,20 @@
+{
+  "name": "boggart",
+  "version": "0.1.0",
+  "description": "A simple static blog cms",
+  "author": "Gio d'Amelio",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/giodamelio/boggart.git"
+  },
+  "keywords": [
+    "blog",
+    "static"
+  ],
+  "bugs": {
+    "url": "https://github.com/giodamelio/boggart/issues"
+  },
+  "homepage": "https://github.com/giodamelio/boggart"
+}

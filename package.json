@@ -24,8 +24,10 @@
     "gulp-babel": "^4.0.0",
     "gulp-insert": "^0.4.0",
     "gulp-nodemon": "^1.0.5",
+    "gulp-shell": "^0.4.0",
     "gulp-sourcemaps": "^1.5.1",
     "gulp-util": "^3.0.4",
+    "node-inspector": "^0.9.2",
     "pretty-error": "^1.1.1",
     "source-map-support": "^0.2.10"
   }

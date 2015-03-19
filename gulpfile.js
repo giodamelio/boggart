@@ -17,11 +17,6 @@ gulp.task("babel", function() {
         .pipe(gulp.dest("lib/server/"));
 });
 
-// Watch and auto-recompile
-gulp.task("watch", ["babel"], function() {
-    gulp.watch("src/server/**/*.js", ["babel"]);
-});
-
 // Run the server
 gulp.task("server", ["babel"], function() {
     nodemon({
@@ -46,6 +41,18 @@ gulp.task("webpack", function() {
                 filename: "app.js"
             }
         })).pipe(gulp.dest("lib/client/"));
+});
+
+// Copy html to lib/client/
+gulp.task("copy-html", function() {
+    gulp.src("./src/client/index.html")
+        .pipe(gulp.dest("./lib/client/"));
+});
+
+// Watch and auto-recompile
+gulp.task("watch", ["babel", "copy-html"], function() {
+    gulp.watch("src/server/**/*.js", ["babel"]);
+    gulp.watch("src/client/index.html", ["copy-html"]);
 });
 
 // Run the dev server

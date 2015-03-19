@@ -39,6 +39,17 @@ gulp.task("webpack", function() {
             watch: true,
             output: {
                 filename: "app.js"
+            },
+            devtool: "inline-source-map",
+            module: {
+                loaders: [
+                    // Load js with jsx and babel
+                    { 
+                        test: /\.js$/,
+                        loaders: ["jsx", "babel"],
+                        exclude: /node_modules/
+                    }
+                ]
             }
         })).pipe(gulp.dest("lib/client/"));
 });

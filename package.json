@@ -30,5 +30,8 @@
     "node-inspector": "^0.9.2",
     "pretty-error": "^1.1.1",
     "source-map-support": "^0.2.10"
+  },
+  "dependencies": {
+    "express": "^4.12.3"
   }
 }

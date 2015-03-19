@@ -1,7 +1,13 @@
 var express = require("express");
 
+var Api = require("./api");
+
 var server = express();
 
+// Mount our api
+server.use(Api);
+
+// Send our frontend
 server.get("/", function(req, res) {
     res.send("Hello World!");
 });

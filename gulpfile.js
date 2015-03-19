@@ -9,7 +9,7 @@ var shell = require("gulp-shell");
 // Compile our es6 code to es5 with babel
 gulp.task("babel", function() {
     return gulp.src("src/**/*.js")
-        .pipe(insert.prepend("require(\"source-map-support\").install();\n\n"))
+        .pipe(insert.prepend("require(\"source-map-support\").install(); require(\"pretty-error\").start();\n\n"))
         .pipe(sourcemaps.init())
         .pipe(babel())
         .pipe(sourcemaps.write())
